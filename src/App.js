@@ -1,19 +1,19 @@
-import "./App.css";
 import Header from "./component/common/Header";
 import Banner from "./component/Banner";
 import Intro from "./component/Intro";
-import Card from "./component/Card";
+import Cart from "./component/Cart";
+import Service from "./component/Service";
 
 function App() {
   return (
-    <div className="App">
-      <head>
-        <title>Bounless.com</title>
-      </head>
+    <div>
+      <title>Bounless.com</title>
       <Header />
       <Banner />
       <Intro />
-      <Card />
+      <Cart />
+      <Service />
+      <img src="images/nuro.png" alt="Nuro" />
     </div>
   );
 }
