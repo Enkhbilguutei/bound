@@ -15,6 +15,6 @@ function Service() {
       </Box>
     </Container>
   );
-}
+
 
 export default Service;
