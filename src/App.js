@@ -3,9 +3,13 @@ import Header from "./component/common/Header";
 import Banner from "./component/Banner";
 import Intro from "./component/Intro";
 import Card from "./component/Card";
+
 function App() {
   return (
     <div className="App">
+      <head>
+        <title>Bounless.com</title>
+      </head>
       <Header />
       <Banner />
       <Intro />

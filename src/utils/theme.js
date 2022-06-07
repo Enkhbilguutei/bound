@@ -9,7 +9,7 @@ const base = createTheme({
     secondary: {
       main: "#FFFFFF",
     },
-    error: {
+    tritary: {
       main: deepPurple[900],
     },
   },
