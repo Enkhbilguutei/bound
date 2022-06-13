@@ -7,7 +7,6 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
@@ -36,8 +35,6 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-
-
     <AppBar position="static" sx={{ backgroundColor: "#000" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -56,7 +53,7 @@ const ResponsiveAppBar = () => {
               color: "inherit",
               textDecoration: "none",
             }}
-            >
+          >
             Boundless
           </Typography>
 
@@ -68,7 +65,7 @@ const ResponsiveAppBar = () => {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-              >
+            >
               <MenuIcon />
             </IconButton>
             <Menu
@@ -88,7 +85,7 @@ const ResponsiveAppBar = () => {
               sx={{
                 display: { xs: "block", md: "none" },
               }}
-              >
+            >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
@@ -112,15 +109,15 @@ const ResponsiveAppBar = () => {
               color: "inherit",
               textDecoration: "none",
             }}
-            >
+          >
             B
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
-              key={page}
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
               </Button>

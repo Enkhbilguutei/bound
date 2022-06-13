@@ -31,7 +31,7 @@ function Cart() {
   return (
     <Container>
       <Grid container spacing={4} sx={{ my: 10 }}>
-        <Grid item xs={6} md={6} sx={{ color: "#fff", textAlign: "left" }}>
+        <Grid item xs={12} md={6} sx={{ color: "#fff", textAlign: "left" }}>
           <Typography sx={{ color: "#909090" }}>
             ҮЙЛЧИЛГЭЭ: ВЭБСАЙТ 2.0
           </Typography>
@@ -44,7 +44,7 @@ function Cart() {
             Дэлгэрэнгүй
           </Button>
         </Grid>
-        <Grid item xs={6} md={6}>
+        <Grid item xs={12} md={6}>
           <Card sx={{ borderRadius: "20px" }}>
             <CardContent
               sx={{
@@ -57,14 +57,14 @@ function Cart() {
         </Grid>
       </Grid>
       <Grid container spacing={4} sx={{ my: 10 }}>
-        <Grid item xs={6} sx={{ color: "#fff" }}>
+        <Grid item xs={12} md={6} sx={{ color: "#fff" }}>
           <Card sx={{ borderRadius: "20px" }}>
             <CardContent
               sx={{ width: 400, height: 370, backgroundColor: "#fff" }}
             ></CardContent>
           </Card>
         </Grid>
-        <Grid item xs={6} md={6} sx={{ color: "#fff", textAlign: "left" }}>
+        <Grid item xs={12} md={6} sx={{ color: "#fff", textAlign: "left" }}>
           <Typography sx={{ color: "#909090" }}>
             ANNOTATE COMPUTER VISION
           </Typography>
