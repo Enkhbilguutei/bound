@@ -1,22 +1,15 @@
-import Header from "./component/common/Header";
-import Banner from "./component/Banner";
-import Intro from "./component/Intro";
-import Cart from "./component/Cart";
-import Service from "./component/Service";
+import Home from "./pages/Home";
 import About from "./pages/About";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <title>Bounless.com</title>
-      <Header />
-      <Banner />
-      <Intro />
-      <Cart />
-      <Service />
-      <About />
-      <img src="images/nuro.png" alt="Nuro" />
-    </div>
+    <>
+      <Routes>
+        <Route path="/About" element={<About />} />
+        <Route path="/Home" element={<Home />} />
+      </Routes>
+    </>
   );
 }
 
