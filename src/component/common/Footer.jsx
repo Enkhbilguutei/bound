@@ -1,75 +1,60 @@
-import React from "react";
-import Paper from "@mui/material/Paper";
-import Stack from "@mui/material/Stack";
+import * as React from "react";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
+import GlobalStyles from "@mui/material/GlobalStyles";
 import Container from "@mui/material/Container";
-// react icons
-import { BsGlobe } from "react-icons/bs";
-import { IoChevronUpOutline } from "react-icons/io5";
 
-import {
-  flexBetweenCenter,
-  justifyCenter,
-  fullWidthFlex,
-} from "themes/commonStyles";
+function Copyright(props) {
+  return (
+    <Typography variant="body2" color="#fff" align="center" {...props}>
+      {"Copyright © "}
+      <Link color="common.white" href="https://mui.com/">
+        Your Website
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+}
 
-const footerLinks = [
-  { id: 1, text: "Privacy", url: "#" },
-  { id: 2, text: "Terms", url: "#" },
-  { id: 3, text: "Sitemap", url: "#" },
-  { id: 4, text: "Destinations", url: "#" },
+const footers = [
+  {
+    title: "Company",
+    description: ["Team", "History", "Contact us", "Locations"],
+  },
+  {
+    title: "Features",
+    description: [
+      "Cool stuff",
+      "Random feature",
+      "Team feature",
+      "Developer stuff",
+      "Another one",
+    ],
+  },
+  {
+    title: "Resources",
+    description: [
+      "Resource",
+      "Resource name",
+      "Another resource",
+      "Final resource",
+    ],
+  },
+  {
+    title: "Legal",
+    description: ["Privacy policy", "Terms of use"],
+  },
 ];
 
-const Footer = () => {
+function PricingContent() {
   return (
-    <Box
-      sx={{
-        ...fullWidthFlex,
-        borderTop: "1px solid #ddd",
-      }}
-    >
-      <Container maxWidth="xl">
-        <Box
-          sx={{
-            ...flexBetweenCenter,
-            width: "100%",
-          }}
-        >
-          <Stack>
-            <Paper>
-              <Link href="#"> 2022 Airbnb Copyright </Link>
-            </Paper>
-            {footerLinks.map((link) => {
-              return (
-                <Paper key={link.id}>
-                  <Link href={link.url}> {link.text}</Link>
-                </Paper>
-              );
-            })}
-          </Stack>
+    <>
+      <GlobalStyles
+        styles={{ ul: { margin: 0, padding: 0, listStyle: "none" } }}
+      />
 
-<<<<<<< HEAD
-          <Stack>
-            <Paper sx={justifyCenter}>
-              <Button>
-                <Box sx={{ ...justifyCenter, mr: 1 }}>
-                  <BsGlobe size={24} />
-                </Box>
-                English (CA)
-              </Button>
-              <Button> $CAD </Button>
-              <Button>
-                Support & Resources
-                <Box sx={{ ...justifyCenter, ml: 1 }}>
-                  <IoChevronUpOutline size={24} />
-                </Box>
-              </Button>
-            </Paper>
-          </Stack>
-        </Box>
-=======
       {/* Footer */}
       <Container
         maxWidth="md"
@@ -94,12 +79,7 @@ const Footer = () => {
               <ul>
                 {footer.description.map((item) => (
                   <li key={item}>
-                    <Link
-                      href="#"
-                      variant="subtitle1"
-                      color="#ffff"
-                      sx={{ textDecoration: "none" }}
-                    >
+                    <Link href="#" variant="subtitle1" color="#ffff">
                       {item}
                     </Link>
                   </li>
@@ -109,10 +89,11 @@ const Footer = () => {
           ))}
         </Grid>
         <Copyright sx={{ mt: 5 }} />
->>>>>>> 3b0d10faaa4f002986096d177a06e1b089c5d11b
       </Container>
-    </Box>
+    </>
   );
-};
+}
 
-export default Footer;
+export default function Pricing() {
+  return <PricingContent />;
+}
