@@ -3,62 +3,56 @@ import React from "react";
 
 function Banner() {
   return (
-    <div className="Banner-bg">
-      <Container
+    <Container sx={{ my: 14 }}>
+      <Typography
+        variant="h1"
+        color="common.white"
         sx={{
-          my: 15,
+          textAlign: "left",
+          my: 5,
+
+          justifyContent: "center",
+          align: "left",
         }}
       >
-        <Typography
-          variant="h1"
-          color="common.white"
+        Better Data. <br />
+        Better AI.
+      </Typography>
+      <Typography
+        variant="body1"
+        color="common.white"
+        sx={{ textAlign: "justify" }}
+      >
+        Better data leads to more performant models. Performant models lead to
+        faster <br />
+        deployment. Deliver value from your AI investments faster with better
+        data.
+      </Typography>
+      <Stack direction="row" spacing={2} sx={{ my: 5 }}>
+        <Button
+          variant="outlined"
+          size="large"
           sx={{
-            textAlign: "left",
-            my: 5,
-
-            justifyContent: "center",
-            align: "left",
+            borderRadius: 5,
+            justifyContent: "flex-start",
+            display: "inline-block",
           }}
         >
-          Better Data. <br />
-          Better AI.
-        </Typography>
-        <Typography
-          variant="body1"
-          color="common.white"
-          sx={{ textAlign: "justify" }}
+          Get Started
+        </Button>
+        <Button
+          variant="outlined"
+          size="large"
+          sx={{
+            borderRadius: 5,
+            justifyContent: "flex-start",
+            display: "inline-block",
+          }}
         >
-          Better data leads to more performant models. Performant models lead to
-          faster <br />
-          deployment. Deliver value from your AI investments faster with better
-          data.
-        </Typography>
-        <Stack direction="row" spacing={2} sx={{ my: 5 }}>
-          <Button
-            variant="outlined"
-            size="large"
-            sx={{
-              borderRadius: 5,
-              justifyContent: "flex-start",
-              display: "inline-block",
-            }}
-          >
-            Get Started
-          </Button>
-          <Button
-            variant="outlined"
-            size="large"
-            sx={{
-              borderRadius: 5,
-              justifyContent: "flex-start",
-              display: "inline-block",
-            }}
-          >
-            talk to sale
-          </Button>
-        </Stack>
-      </Container>
-    </div>
+          talk to sale
+        </Button>
+      </Stack>
+    </Container>
   );
 }
 
