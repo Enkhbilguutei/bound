@@ -79,7 +79,12 @@ function PricingContent() {
               <ul>
                 {footer.description.map((item) => (
                   <li key={item}>
-                    <Link href="#" variant="subtitle1" color="#ffff">
+                    <Link
+                      href="#"
+                      variant="subtitle1"
+                      color="#ffff"
+                      sx={{ textDecoration: "none" }}
+                    >
                       {item}
                     </Link>
                   </li>

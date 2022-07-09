@@ -9,6 +9,7 @@ import {
   Divider,
   CardContent,
   Button,
+  CardMedia,
 } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Card from "@mui/material/Card";
@@ -46,13 +47,18 @@ function Cart() {
         </Grid>
         <Grid item xs={12} md={6}>
           <Card sx={{ borderRadius: "20px" }}>
+            <CardMedia
+              component="img"
+              image="../public/images/nuro.png"
+              alt="Temusdu"
+            />
             <CardContent
               sx={{
                 width: 400,
                 height: 370,
                 backgroundColor: "#fff",
               }}
-            ></CardContent>
+            />
           </Card>
         </Grid>
       </Grid>
@@ -61,7 +67,7 @@ function Cart() {
           <Card sx={{ borderRadius: "20px" }}>
             <CardContent
               sx={{ width: 400, height: 370, backgroundColor: "#fff" }}
-            ></CardContent>
+            />
           </Card>
         </Grid>
         <Grid item xs={12} md={6} sx={{ color: "#fff", textAlign: "left" }}>
